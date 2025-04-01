@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://g44bje8pemkx"]
+
+[ext_resource type="PackedScene" uid="uid://dfh67qk34drk2" path="res://Escenes/jugador.tscn" id="1_jhvjy"]
+[ext_resource type="PackedScene" uid="uid://ciwkusbgjty1c" path="res://Escenes/Area.tscn" id="1_nxaih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hghi8"]
+size = Vector2(20, 15.375)
+
+[node name="Joc" type="Node2D"]
+
+[node name="Area2D" parent="." instance=ExtResource("1_nxaih")]
+position = Vector2(238, 230)
+scale = Vector2(6.565, 6.565)
+
+[node name="Jugador" parent="." instance=ExtResource("1_jhvjy")]
+position = Vector2(757, 376)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(409, 339)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(5, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(100, 28.25)
+scale = Vector2(10, 4)
+shape = SubResource("RectangleShape2D_hghi8")

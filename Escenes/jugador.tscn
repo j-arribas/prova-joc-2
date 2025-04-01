@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfh67qk34drk2"]
+
+[ext_resource type="Script" uid="uid://d0t7ekf6t34u6" path="res://Scripts/Move.gd" id="1_xyf7p"]
+[ext_resource type="Texture2D" uid="uid://brtnfbpjywxkf" path="res://Imatges/icon.svg" id="2_mvi0r"]
+[ext_resource type="Script" uid="uid://dppb0aev532h6" path="res://Scripts/sprite_2d.gd" id="3_4urkw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_belbe"]
+size = Vector2(120, 120)
+
+[node name="Jugador" type="CharacterBody2D"]
+script = ExtResource("1_xyf7p")
+
+[node name="Pare" type="Sprite2D" parent="."]
+texture = ExtResource("2_mvi0r")
+
+[node name="Fill" type="Sprite2D" parent="Pare"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Pare/Fill"]
+position = Vector2(200, 0)
+scale = Vector2(0.40625, 0.453125)
+texture = ExtResource("2_mvi0r")
+script = ExtResource("3_4urkw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_belbe")
