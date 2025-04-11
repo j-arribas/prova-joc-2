@@ -13,7 +13,7 @@ position = Vector2(238, 230)
 scale = Vector2(6.565, 6.565)
 
 [node name="Jugador" parent="." instance=ExtResource("1_jhvjy")]
-position = Vector2(757, 376)
+position = Vector2(513, 201)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(409, 339)
